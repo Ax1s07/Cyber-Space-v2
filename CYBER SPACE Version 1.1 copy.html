@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cyber Space</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+    }
+    .welcome-page {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+    }
+    .title {
+        font-size: 36px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    .time {
+        font-size: 24px;
+    }
+    .content {
+        margin-top: 110px; /* Adjust this value to leave space for the welcome page */
+    }
+</style>
+</head>
+<body>
+
+<div class="welcome-page">
+    <div class="title">Cyber Space</div>
+    <div class="time" id="time"></div>
+</div>
+
+<div class="content">
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculator & Notes Page</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+    }
+    .navbar {
+        background-color: #222;
+        overflow: hidden;
+        color: white; /* Changed text color to white */
+    }
+    .navbar a {
+        float: left;
+        display: block;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+        font-size: 18px;
+    }
+    .navbar a:hover {
+        background-color: #444;
+    }
+    .calculator,
+    .notes {
+        display: none;
+        margin: 20px auto;
+        width: 300px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    }
+    .notes {
+        width: 20cm; /* Changed width to 20cm */
+        height: 20cm; /* Changed height to 20cm */
+        overflow-y: auto;
+    }
+    .active {
+        display: block;
+    }
+    .calculator-title,
+    .notes-title {
+        text-align: center;
+        font-weight: bold;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    input[type="text"] {
+        width: calc(100% - 20px);
+        margin-bottom: 10px;
+        padding: 10px;
+        font-size: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        text-align: right;
+    }
+    input[type="button"] {
+        width: calc(25% - 11px);
+        height: 50px;
+        margin: 5px;
+        font-size: 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    input[type="button"]:hover {
+        background-color: #f0f0f0;
+    }
+    .row {
+        display: flex;
+    }
+    .row input[type="button"] {
+        flex: 1;
+    }
+</style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="#" onclick="showCalculator()">Calculator</a>
+        <a href="#" onclick="showNotes()">Notes Page</a>
+        <a href="https://www.netflix.com/browse">Netflix</a> https://www.netflix.com/browse
+    </div>
+    
+
+<div class="calculator active">
+    <div class="calculator-title">Basic Calculator</div>
+    <input type="text" id="display" disabled><br>
+    <div class="row">
+        <input type="button" value="7" onclick="addToDisplay('7')">
+        <input type="button" value="8" onclick="addToDisplay('8')">
+        <input type="button" value="9" onclick="addToDisplay('9')">
+        <input type="button" value="/" onclick="addToDisplay('/')">
+    </div>
+    <div class="row">
+        <input type="button" value="4" onclick="addToDisplay('4')">
+        <input type="button" value="5" onclick="addToDisplay('5')">
+        <input type="button" value="6" onclick="addToDisplay('6')">
+        <input type="button" value="x" onclick="addToDisplay('*')">
+    </div>
+    <div class="row">
+        <input type="button" value="1" onclick="addToDisplay('1')">
+        <input type="button" value="2" onclick="addToDisplay('2')">
+        <input type="button" value="3" onclick="addToDisplay('3')">
+        <input type="button" value="-" onclick="addToDisplay('-')">
+    </div>
+    <div class="row">
+        <input type="button" value="0" onclick="addToDisplay('0')">
+        <input type="button" value="." onclick="addToDisplay('.')">
+        <input type="button" value="=" onclick="calculate()">
+        <input type="button" value="+" onclick="addToDisplay('+')">
+    </div>
+    <div class="row">
+        <input type="button" value="C" onclick="clearDisplay()">
+    </div>
+</div>
+
+<div class="notes">
+    <div class="notes-title">Notes Page</div>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.2/css/bulma.min.css">
+    <style>
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .entry {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .date {
+            font-weight: bold;
+            color: #555;
+        }
+        .delete-button {
+            cursor: pointer;
+            color: red;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        .edit-button {
+            cursor: pointer;
+            color: blue;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        .bold-button {
+            cursor: pointer;
+            color: blue;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        .textarea {
+            height: 25vh; /* Adjust the height here */
+        }
+        .clock {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+            <h1 class="title has-text-centered">Notes Page</h1>
+            <div class="clock" id="clock"></div>
+            <div class="field">
+                <div class="control">
+                    <textarea id="diary-entry" class="textarea" placeholder="Write your note here..." spellcheck="true"></textarea>
+                </div>
+            </div>
+            <div class="field is-grouped is-grouped-centered">
+                <div class="control">
+                    <button class="button is-primary" onclick="addBoldText()">Bold</button>
+                </div>
+                <div class="control">
+                    <button class="button is-primary" onclick="addEntry()">Save Note</button>
+                </div>
+            </div>
+            <div class="entries" id="entries">
+                <!-- Entries will be added here dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Load existing entries from localStorage
+        window.onload = function() {
+            loadEntries();
+            setInterval(updateClock, 1000); // Update clock every second
+        };
+
+        function addEntry() {
+            var entry = document.getElementById('diary-entry').value;
+            if (entry.trim() === '') {
+                alert('Please write something before adding!');
+                return;
+            }
+            var date = new Date().toLocaleString();
+            var entryId = Date.now(); // Generate unique entry id
+            var entryHTML = '<div id="entry-' + entryId + '" class="entry"><p class="date">' + formatDate(date) + '</p><p>' + entry + '</p><span class="delete-button" onclick="deleteEntry(' + entryId + ')">Delete</span><span class="edit-button" onclick="editEntry(' + entryId + ')">Edit</span></div>';
+            document.getElementById('entries').insertAdjacentHTML('afterbegin', entryHTML);
+            saveEntry(entryId, date, entry);
+            document.getElementById('diary-entry').value = '';
+        }
+
+        function addBoldText() {
+            var entryField = document.getElementById('diary-entry');
+            var selectedText = entryField.value.substring(entryField.selectionStart, entryField.selectionEnd);
+            var newText = entryField.value.substring(0, entryField.selectionStart) + '<strong>' + selectedText + '</strong>' + entryField.value.substring(entryField.selectionEnd);
+            entryField.value = newText;
+        }
+
+        function saveEntry(entryId, date, entry) {
+            var entries = JSON.parse(localStorage.getItem('diaryEntries')) || [];
+            entries.unshift({ id: entryId, date: date, entry: entry });
+            localStorage.setItem('diaryEntries', JSON.stringify(entries));
+        }
+
+        function loadEntries() {
+            var entries = JSON.parse(localStorage.getItem('diaryEntries')) || [];
+            var entriesContainer = document.getElementById('entries');
+            entriesContainer.innerHTML = '';
+            entries.forEach(function(item) {
+                var entryHTML = '<div id="entry-' + item.id + '" class="entry"><p class="date">' + formatDate(item.date) + '</p><p>' + item.entry + '</p><span class="delete-button" onclick="deleteEntry(' + item.id + ')">Delete</span><span class="edit-button" onclick="editEntry(' + item.id + ')">Edit</span></div>';
+                entriesContainer.insertAdjacentHTML('beforeend', entryHTML);
+            });
+        }
+
+        function deleteEntry(entryId) {
+            var entryElement = document.getElementById('entry-' + entryId);
+            entryElement.remove();
+            var entries = JSON.parse(localStorage.getItem('diaryEntries')) || [];
+            var filteredEntries = entries.filter(function(item) {
+                return item.id !== entryId;
+            });
+            localStorage.setItem('diaryEntries', JSON.stringify(filteredEntries));
+        }
+
+        function editEntry(entryId) {
+            var entryElement = document.getElementById('entry-' + entryId);
+            var entryText = entryElement.querySelector('p:nth-of-type(2)').textContent;
+            document.getElementById('diary-entry').value = entryText;
+            deleteEntry(entryId);
+        }
+
+        function formatDate(dateString) {
+            var options = { year: 'numeric', month: '2-digit', day: '2-digit', hour: 'numeric', minute: 'numeric', second: 'numeric' };
+            return new Date(dateString).toLocaleDateString('en-US', options);
+        }
+
+        function updateClock() {
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+            var meridian = hours >= 12 ? 'PM' : 'AM';
+            hours = hours % 12 || 12;
+            document.getElementById('clock').textContent = padZero(hours) + ':' + padZero(minutes) + ':' + padZero(seconds) + ' ' + meridian;
+        }
+
+        function padZero(num) {
+            return num < 10 ? '0' + num : num;
+        }
+    </script>
+</body>
+</html>
+
+</div>
+
+<script>
+    function showCalculator() {
+        document.querySelector('.calculator').classList.add('active');
+        document.querySelector('.notes').classList.remove('active');
+    }
+
+    function showNotes() {
+        document.querySelector('.notes').classList.add('active');
+        document.querySelector('.calculator').classList.remove('active');
+    }
+
+    function addToDisplay(value) {
+        document.getElementById("display").value += value;
+    }
+
+    function clearDisplay() {
+        document.getElementById("display").value = '';
+    }
+
+    function calculate() {
+        var result = eval(document.getElementById("display").value);
+        document.getElementById("display").value = result;
+    }
+</script>
+
+</body>
+</html>
+
+</div>
+
+<script>
+    function updateTime() {
+        var now = new Date();
+        var timeString = now.toLocaleTimeString();
+        document.getElementById("time").innerText = timeString;
+    }
+
+    // Update time every second
+    setInterval(updateTime, 1000);
+</script>
+
+</body>
+</html>
